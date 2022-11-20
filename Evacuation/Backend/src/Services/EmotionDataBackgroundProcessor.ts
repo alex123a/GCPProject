@@ -8,8 +8,7 @@ import UserController from './../Controllers/UserController';
 import { SocketService } from './SocketService';
 import IORedis from 'ioredis';
 
-// const connectionString: string | undefined = process.env.REDIS_URI;
-const connectionString: string | undefined = "rediss://default:AVNS_AP3htwbuHJU_odC4gqb@redis-26da5570-evaccloudredis2.aivencloud.com:21345";
+const connectionString: string | undefined = process.env.REDIS_URI;
 const connection = new IORedis(connectionString ? connectionString : '', { // TODO: Create new redis service berfore the experiment
   maxRetriesPerRequest: null
 });
